@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object Finder Web App</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-image: url('background.jpg'); /* Replace with your background image */
+            background-size: cover;
+            background-position: center;
+            color: rgb(21, 134, 165);
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            padding-top: 100px;
+        }
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+        input[type="text"] {
+            width: 300px;
+            padding: 10px;
+            font-size: 1rem;
+            margin-right: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 1rem;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #model-status, #object-status {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        #p5canvas {
+            background-color: #f8f9fa;
+            border: 1px solid #ced4da;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="display-4">Object Finder Web App</h1>
+        <p class="lead">Enter the object name and click Start to search with the model.</p>
+        <div>
+            <input type="text" id="objectName" placeholder="Enter object name...">
+            <button onclick="start()">Start</button>
+        </div>
+        <p id="model-status"></p>
+        <p id="object-status"></p>
+        <div id="p5canvas">
+            <!-- This will be populated by p5.js canvas -->
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (optional, for Bootstrap components) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- p5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.js"></script>
+    <!-- ml5.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ml5/0.6.0/ml5.min.js"></script>
+
+    <!-- Your custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
